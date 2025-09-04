@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Twitter：フォロー,フォロワー非表示",
+  "version": "1.0",
+  "description": "Twitterのフォロワー数,フォロー数の表示を「0」で固定します。",
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*", "https://x.com/*"],
+      "js": ["content.js"]
+    }
+  ]
+}

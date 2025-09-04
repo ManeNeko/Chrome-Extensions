@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "note：目次固定するやつ",
+  "version": "1.0",
+  "description": "note.com の記事ページで目次を固定表示します。",
+  "content_scripts": [
+    {
+      "matches": ["https://note.com/*"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ]
+}

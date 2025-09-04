@@ -1,0 +1,33 @@
+.o-tableOfContents {
+  position: fixed;
+  top: 5%;
+  right: 8%;
+  width: 18%;
+  max-height: 85%;
+  overflow-y: auto;
+  z-index: 10;
+  background-color: white;
+  padding: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* 目次のアクティブな項目を強調表示するスタイル */
+.o-tableOfContents__link.active {
+  border-left: 4px solid #007bff; /* 強調色 */
+  padding-left: 12px; /* 元のpaddingと合わせて調整 */
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* 画面幅が1024px以下の場合に適用されるスタイル */
+@media (max-width: 1500px) {
+  .o-tableOfContents {
+    position: static; /* 固定を解除し、通常の要素として配置 */
+    width: auto;      /* 幅を自動調整 */
+    max-height: none; /* 高さの制限を解除 */
+    margin: 2em 0;    /* 上下に余白を追加して見やすくする */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+}

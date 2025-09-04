@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "おほキル",
+  "version": "1.0",
+  "description": "DLsiteのランキングから、設定した単語を含むコンテンツを非表示にします。",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://www.dlsite.com/maniax/ranking/*"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["https://www.dlsite.com/maniax/ranking/*"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}

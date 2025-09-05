@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "単語置換くん",
+  "version": "1.0",
+  "description": "ページ内の指定された単語を、別の単語に置換します。",
+  "permissions": [
+    "storage",
+    "tabs"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}

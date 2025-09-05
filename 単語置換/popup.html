@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>単語ペア設定</title>
+  <meta charset="UTF-8">
+  <style>
+    body {
+      font-family: sans-serif;
+      width: 380px;
+      padding: 10px;
+    }
+    h1 {
+      font-size: 16px;
+      margin-top: 0;
+    }
+    #add-form {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    #add-form input {
+      flex-grow: 1;
+      padding: 5px;
+      width: 120px;
+    }
+    #add-form button {
+      padding: 5px 10px;
+    }
+    #word-pairs-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      max-height: 200px;
+      overflow-y: auto;
+    }
+    #word-pairs-list li {
+      display: flex;
+      align-items: center;
+      padding: 5px;
+      border-bottom: 1px solid #eee;
+      gap: 5px;
+    }
+    #word-pairs-list li input {
+      flex-grow: 1;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      width: 120px;
+    }
+    .delete-btn {
+      cursor: pointer;
+      color: red;
+      border: 1px solid red;
+      background: white;
+      border-radius: 4px;
+      padding: 2px 5px;
+    }
+    .drag-handle {
+      cursor: grab;
+      padding: 0 5px;
+      color: #888;
+    }
+    #word-pairs-list li.dragging {
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+  <h1>単語置換設定</h1>
+  <form id="add-form">
+    <input type="text" id="from-word" placeholder="置換前の単語" required>
+    <input type="text" id="to-word" placeholder="置換後の単語" required>
+    <button type="submit">追加</button>
+  </form>
+  <ul id="word-pairs-list"></ul>
+  <script src="popup.js"></script>
+</body>
+</html>

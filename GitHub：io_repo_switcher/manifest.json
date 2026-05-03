@@ -1,0 +1,12 @@
+{
+	"manifest_version": 1,
+	"name": "GitHub ⇔ Pages Switcher",
+	"version": "1.0",
+	"permissions": [
+		"activeTab",
+		"contextMenus"
+	],
+	"background": {
+		"service_worker": "background.js"
+	}
+}

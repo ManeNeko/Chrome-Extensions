@@ -4,7 +4,12 @@
 	"version": "1.0",
 	"permissions": [
 		"activeTab",
-		"contextMenus"
+		"contextMenus",
+		"scripting"
+	],
+	"host_permissions": [
+		"*://*.github.com/*",
+		"*://*.github.io/*"
 	],
 	"background": {
 		"service_worker": "background.js"
